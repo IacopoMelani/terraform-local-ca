@@ -8,5 +8,5 @@ output "leaf_private_key" {
 }
 
 output "leaf_ca_chain" {
-  value = var.parent_ca_cert
+  value = var.parent_ca_chain
 }

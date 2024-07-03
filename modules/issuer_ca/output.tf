@@ -8,5 +8,5 @@ output "issuer_private_key" {
 }
 
 output "issuer_ca_chain" {
-  value = format("%s\n%s", tls_locally_signed_cert.this.cert_pem, var.parent_ca_cert)
+  value = format("%s\n%s", tls_locally_signed_cert.this.cert_pem, var.parent_ca_chain)
 }

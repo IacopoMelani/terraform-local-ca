@@ -31,13 +31,12 @@ resource "tls_locally_signed_cert" "this" {
 resource "local_sensitive_file" "cert" {
   content  = tls_locally_signed_cert.this.cert_pem
   filename = "${path.root}/certs/${var.issuer.common_name}/cert.pem"
-
 }
 resource "local_sensitive_file" "key" {
   content  = tls_private_key.this.private_key_pem
   filename = "${path.root}/certs/${var.issuer.common_name}/key.pem"
 }
 resource "local_sensitive_file" "ca_chain" {
-  content  = var.parent_ca_cert
+  content  = var.parent_ca_chain
   filename = "${path.root}/certs/${var.issuer.common_name}/ca_chain.pem"
 }

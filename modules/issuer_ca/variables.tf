@@ -19,7 +19,7 @@ variable "parent_signing_key" {
   description = "PEM-encoded parent key"
 }
 
-variable "parent_ca_cert" {
+variable "parent_ca_chain" {
   type        = string
   description = "PEM-encoded parent CA certificate"
 }
